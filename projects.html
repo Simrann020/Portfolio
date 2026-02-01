@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Projects with data engineering and data science work. Filter by tags to skim fast." />
+  <title>Projects | Simran Jadhav</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" sizes="32x32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/projects.js"></script>
+  <script defer src="assets/js/modal.js"></script>
+  <script defer src="assets/js/background.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="nav-progress" id="navProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Simran Jadhav</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="education.html">Education</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="Simran_Jadhav_Resume.pdf" download="Simran_Jadhav_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="btn btn-ghost theme-toggle" type="button" id="themeToggle" aria-label="Toggle dark/light theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        </button>
+        <a class="btn btn-primary nav-cta" href="contact.html">Let's talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="page page-projects">
+      <header class="page-head page-head-projects reveal">
+        <h1>Projects</h1>
+        <p class="page-subtitle">Filter by tag to explore different technologies and domains.</p>
+      </header>
+
+      <section class="projects-filters-wrap reveal">
+        <div class="filters card card-glass">
+          <div class="filters-row">
+            <label class="field field-search">
+              <span class="field-label">
+                <svg class="field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                Search
+              </span>
+              <input id="projectSearch" class="input" type="search" placeholder="Search title or tags" autocomplete="off" />
+            </label>
+            <label class="field field-tag">
+              <span class="field-label">
+                <svg class="field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                Tag
+              </span>
+              <select id="tagFilter" class="select">
+                <option value="all">All</option>
+                <option value="aws">AWS</option>
+                <option value="etl">ETL</option>
+                <option value="ml">ML</option>
+                <option value="python">Python</option>
+                <option value="r">R</option>
+                <option value="research">Research</option>
+                <option value="postgres">PostGIS</option>
+                <option value="fastapi">FastAPI</option>
+                <option value="airflow">Airflow</option>
+                <option value="tableau">Tableau</option>
+                <option value="viz">Viz</option>
+                <option value="tfjs">TensorFlow.js</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-grid-section reveal" aria-label="Projects">
+        <div id="projectGrid" class="project-grid">
+        <article class="project card card-glass" data-tags="aws etl postgres fastapi">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Safer Ride, risk aware bike routing</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Sep 2025 – Nov 2025
+              </div>
+            </div>
+
+            <p class="project-summary">
+              Built a prototype AWS data pipeline and a PostGIS store for crash and hazard data, then computed route risk scores and rendered map overlays.
+            </p>
+
+            <button class="btn btn-ghost btn-sm" data-modal="modal-safer-ride" style="margin: var(--s3) 0;">View details</button>
+
+            <ul class="bullet-list compact">
+              <li>Built a prototype pipeline using S3, Glue, Athena, and a PostGIS store on RDS.</li>
+              <li>Cleaned and joined crash and hazard sources and generated feature tables for scoring.</li>
+            </ul>
+
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">AWS</span>
+              <span class="tag">ETL</span>
+              <span class="tag">PostGIS</span>
+              <span class="tag">FastAPI</span>
+            </div>
+
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="ml etl">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">PCOS analysis and detection</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Jan 2025 – Mar 2025
+              </div>
+            </div>
+
+            <p class="project-summary">
+              Built a classification pipeline with cleaning, encoding, and class balance handling, then compared models with cross validation.
+            </p>
+
+            <ul class="bullet-list compact">
+              <li>Built a pipeline with cleaning and encoding steps to prepare inputs for modeling.</li>
+              <li>Reviewed tradeoffs using confusion matrices and precision recall metrics to support analysis.</li>
+            </ul>
+
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">ML</span>
+              <span class="tag">ETL</span>
+            </div>
+
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="ml tfjs">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Yoga posture detection and correction</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Aug 2023 – May 2024
+              </div>
+            </div>
+
+            <p class="project-summary">
+              Trained a yoga posture classification model and built a TensorFlow.js web demo that provides joint based feedback in the browser.
+            </p>
+
+            <ul class="bullet-list compact">
+              <li>Prepared labeled pose data and documented experiments, limitations, and results.</li>
+              <li>Built a browser demo that provides joint based feedback and logs sessions for progress review.</li>
+            </ul>
+
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">ML</span>
+              <span class="tag">TensorFlow.js</span>
+            </div>
+
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="etl ml python docker airflow parquet">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Nexus Weather & Climate — Data pipelines & ML</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                May 2025 – Present
+              </div>
+            </div>
+            <p class="project-summary">
+              ETL for NWP, station, wave, and precipitation data; Parquet outputs, data checks, and model comparison (SVM, Random Forest, CNN LSTM) with MAE, MSE, CRPS.
+            </p>
+            <ul class="bullet-list compact">
+              <li>Prepared NWP, station, wave, and precipitation datasets for training and testing workflows.</li>
+              <li>Saved processed datasets as Parquet with consistent layouts; implemented checks for missing values and unit consistency.</li>
+              <li>Compared SVM, Random Forest, and CNN LSTM prototypes and wrote result notes.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Parquet</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">ML</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="r research regression git">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Isoverse (isoreader2) — Legacy file readers in R</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Dec 2025 – Present
+              </div>
+            </div>
+            <p class="project-summary">
+              Reverse engineered legacy instrument files (MFC CArchive Serialize from decompiled DLLs), mapped fields to offsets, and built R readers with sanity and regression checks.
+            </p>
+            <ul class="bullet-list compact">
+              <li>Traced MFC CArchive Serialize order from decompiled DLLs to understand file layouts.</li>
+              <li>Built R readers using CSV-driven schemas to match original field order; added regression checks.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">R</span>
+              <span class="tag">Research</span>
+              <span class="tag">Regression tests</span>
+              <span class="tag">Git</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="etl airflow docker bigquery">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Airflow ETL with BigQuery</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                —
+              </div>
+            </div>
+            <p class="project-summary">
+              Dockerized ETL pipeline that orchestrates extract, transform, and load steps into BigQuery for scalable analytics.
+            </p>
+            <ul class="bullet-list compact">
+              <li>Apache Airflow DAGs with extract, transform, and load operators.</li>
+              <li>BigQuery as the target store; Docker and Compose for local runs.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">Airflow</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">Docker</span>
+              <span class="tag">ETL</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020/Airflow-etl-Bigquery" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="ml web python">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">AI Powered Code Debugger</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                —
+              </div>
+            </div>
+            <p class="project-summary">
+              REST service that analyzes Python code and returns structured debug suggestions with logs, packaged for repeatable runs.
+            </p>
+            <ul class="bullet-list compact">
+              <li>Python, Flask, Docker, REST API; GPT-based analysis for traceback and fix suggestions.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Docker</span>
+              <span class="tag">ML</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="#" aria-label="Code link (replace)">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="data etl">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Data Integration for Denver International Airport</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                —
+              </div>
+            </div>
+            <p class="project-summary">
+              Automated extracts, reconciled schemas, and added quality rules for stale tickets and ownership, then shipped an incident dashboard.
+            </p>
+            <ul class="bullet-list compact">
+              <li>ServiceNow, Azure DevOps; data integration and incident dashboard.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">Data</span>
+              <span class="tag">ServiceNow</span>
+              <span class="tag">Azure DevOps</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="#" aria-label="Details">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Details
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card card-glass" data-tags="viz data tableau sql">
+          <div class="project-media project-media--icon" aria-hidden="true">
+            <svg class="project-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h2 class="project-title">Amazon Prime Data Analysis using Tableau</h2>
+              <div class="project-dates">
+                <svg class="project-date-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                —
+              </div>
+            </div>
+            <p class="project-summary">
+              SQL-backed Tableau model and views for top performers, rising titles, and long-tail segments with filters and summary pages.
+            </p>
+            <ul class="bullet-list compact">
+              <li>Tableau dashboards; SQL for data model and filters.</li>
+            </ul>
+            <div class="tag-row" aria-label="Tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Viz</span>
+              <span class="tag">Data</span>
+            </div>
+            <div class="link-row">
+              <a class="link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg class="link-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div id="noResults" class="no-results card card-glass" hidden>
+        <h2>No matches</h2>
+        <p>Try a different search or tag.</p>
+      </div>
+
+      <section class="github-cta reveal" aria-label="More on GitHub">
+        <div class="github-cta-card card card-glass">
+          <div class="github-cta-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div class="github-cta-body">
+            <h2 class="github-cta-title">Want to see more?</h2>
+            <p class="github-cta-desc">Browse more projects, experiments, and code on my GitHub.</p>
+            <a class="btn btn-primary github-cta-link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="Visit GitHub profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              Visit my GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+      <div class="footer-social">
+        <a class="footer-social-link" href="mailto:simranjadhav022003@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a class="footer-social-link" href="https://www.linkedin.com/in/simran-jadhav20/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a class="footer-social-link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+      </div>
+      <div class="footer-inner"><span>© <span id="year">2026</span> Simran Jadhav</span></div>
+  </footer>
+
+  <a href="index.html" class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></a>
+
+  <!-- Project Modals -->
+  <div id="modal-safer-ride" class="modal" role="dialog" aria-labelledby="modal-safer-ride-title" aria-modal="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="modal-safer-ride-title" class="modal-title">Safer Ride: Risk-aware bike routing</h2>
+        <button class="modal-close" data-modal-close aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <h3>Overview</h3>
+        <p>Built a prototype AWS data pipeline and a PostGIS store for crash and hazard data, then computed route risk scores and rendered map overlays. This project demonstrates end-to-end data engineering and geospatial analysis.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="bullet-list">
+          <li>Built a prototype pipeline using S3, Glue, Athena, and a PostGIS store on RDS</li>
+          <li>Cleaned and joined crash and hazard sources and generated feature tables for scoring</li>
+          <li>Implemented route risk scoring algorithm using historical crash data</li>
+          <li>Created interactive map overlays for visualization</li>
+        </ul>
+
+        <h3>Technologies</h3>
+        <div class="modal-tags">
+          <span class="chip">AWS</span>
+          <span class="chip">ETL</span>
+          <span class="chip">PostGIS</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Python</span>
+        </div>
+
+        <div class="modal-links">
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">View Project</a>
+          <a href="#" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

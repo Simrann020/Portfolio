@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Experience timeline: Nexus Weather and Climate internship and Isoverse graduate research work." />
+  <title>Experience | Simran Jadhav</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" sizes="32x32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/background.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="nav-progress" id="navProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Simran Jadhav</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="education.html">Education</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="Simran_Jadhav_Resume.pdf" download="Simran_Jadhav_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="btn btn-ghost theme-toggle" type="button" id="themeToggle" aria-label="Toggle dark/light theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        </button>
+        <a class="btn btn-primary nav-cta" href="contact.html">Let's talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="page page-experience">
+      <header class="page-head page-head-experience reveal">
+        <h1>Experience</h1>
+        <p class="page-subtitle">Where I've worked and what I've built.</p>
+      </header>
+
+      <section id="experience" class="experience-timeline reveal" aria-label="Work experience">
+        <div class="timeline">
+          <article class="timeline-item card card-glass">
+            <div class="timeline-item-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div class="timeline-top">
+              <div class="timeline-heading">
+                <h2 class="timeline-title">Data Science and Engineering Intern</h2>
+                <div class="timeline-org">Nexus Weather and Climate</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">
+                  <svg class="timeline-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  May 2025 – Present
+                </span>
+                <span class="timeline-location">
+                  <svg class="timeline-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Boulder, USA
+                </span>
+              </div>
+            </div>
+            <p class="timeline-summary">
+              Extracted, transformed, and loaded NWP, station, wave, and precipitation data to prepare datasets for model training and testing.
+              Saved reusable Parquet outputs and added checks to catch missing values and unit issues early.
+              Compared model outcomes using MAE, MSE, and CRPS and documented findings to support analysis.
+            </p>
+            <ul class="bullet-list">
+              <li>Prepared NWP, station, wave, and precipitation datasets for training and testing workflows.</li>
+              <li>Saved processed datasets as Parquet with consistent layouts for easy reuse.</li>
+              <li>Implemented data checks for missing values, unit consistency, and data ranges to improve reliability.</li>
+              <li>Compared SVM, Random Forest, and CNN LSTM prototypes using MAE, MSE, and CRPS, then wrote result notes.</li>
+            </ul>
+            <div class="tech-line">
+              <span class="tech-k">
+                <svg class="tech-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Tech stack
+              </span>
+              <span class="tech-pills">
+                <span class="chip">Python</span>
+                <span class="chip">SQL</span>
+                <span class="chip">pandas</span>
+                <span class="chip">NumPy</span>
+                <span class="chip">scikit-learn</span>
+                <span class="chip">TensorFlow</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Airflow</span>
+                <span class="chip">Parquet</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="timeline-item card card-glass">
+            <div class="timeline-item-icon timeline-item-icon--research" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="timeline-top">
+              <div class="timeline-heading">
+                <h2 class="timeline-title">Graduate Research Assistant, Isoverse (isoreader2)</h2>
+                <div class="timeline-org">Geomicrobial Physiology Lab at CU Boulder</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">
+                  <svg class="timeline-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  Dec 2025 – Present
+                </span>
+                <span class="timeline-location">
+                  <svg class="timeline-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Boulder, USA
+                </span>
+              </div>
+            </div>
+            <p class="timeline-summary">
+              Reverse engineered legacy instrument files by tracing MFC CArchive Serialize write order from decompiled DLLs.
+              Mapped fields to offsets and likely meanings, then built R readers that follow the original field order.
+              Added sanity checks and regression checks so updates do not break older examples.
+            </p>
+            <ul class="bullet-list">
+              <li>Traced MFC CArchive Serialize order from decompiled DLLs to understand file layouts.</li>
+              <li>Mapped serialized fields to offsets and likely meaning to support analysis.</li>
+              <li>Built R readers using CSV driven schemas and inheritance notes to match original field order.</li>
+              <li>Added clear errors, small fixtures, and regression checks to improve reliability over time.</li>
+            </ul>
+            <div class="tech-line">
+              <span class="tech-k">
+                <svg class="tech-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Tech stack
+              </span>
+              <span class="tech-pills">
+                <span class="chip">R</span>
+                <span class="chip">CSV schemas</span>
+                <span class="chip">Regression tests</span>
+                <span class="chip">Git</span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-social">
+      <a class="footer-social-link" href="mailto:simranjadhav022003@gmail.com" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a class="footer-social-link" href="https://www.linkedin.com/in/simran-jadhav20/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a class="footer-social-link" href="https://github.com/Simrann020" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+    <div class="footer-inner"><span>© <span id="year">2026</span> Simran Jadhav</span></div>
+  </footer>
+
+  <a href="index.html" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </a>
+</body>
+</html>

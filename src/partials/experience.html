@@ -1,0 +1,189 @@
+<section id="experience" class="section" data-section="experience" aria-label="Experience">
+  <div class="page">
+    <div class="section-head reveal">
+      <h2>Experience</h2>
+      <p class="section-subtitle">Where I've worked and what I've built.</p>
+    </div>
+
+    <div class="exp-layout">
+      <div class="exp-timeline">
+        <!-- Role 1 -->
+        <article class="card card-glass exp-card reveal">
+          <div class="exp-header">
+            <div class="exp-logo exp-logo-nexus" aria-hidden="true">
+              <svg viewBox="0 0 48 48" class="exp-logo-ico" aria-hidden="true">
+                <defs>
+                  <linearGradient id="wx" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="rgba(200,75,255,1)"></stop>
+                    <stop offset="1" stop-color="rgba(255,79,216,1)"></stop>
+                  </linearGradient>
+                </defs>
+                <path d="M14 28c0-6 4-10 10-10 5 0 9 3 10 8 4 0 7 3 7 7 0 4-3 7-7 7H17c-4 0-7-3-7-7 0-3 2-6 4-7z" fill="url(#wx)" opacity="0.95"></path>
+                <path d="M10 35c4 1 8 2 14 2 8 0 12-1 16-3" fill="none" stroke="rgba(245,240,255,.85)" stroke-width="2" stroke-linecap="round" opacity="0.55"></path>
+              </svg>
+            </div>
+
+            <div class="exp-titleblock">
+              <h3 class="exp-title">Data Science and Engineering Intern</h3>
+              <div class="exp-org">Nexus Weather and Climate</div>
+              <div class="exp-meta">May 2025 to Present · Boulder, USA</div>
+            </div>
+          </div>
+
+          <div class="exp-badges" aria-label="Highlights">
+            <span class="exp-badge">Data prep</span>
+            <span class="exp-badge">Parquet layouts</span>
+            <span class="exp-badge">Validation checks</span>
+            <span class="exp-badge">Model comparison</span>
+          </div>
+
+          <p class="exp-lead">
+            Focused on making datasets reliable and easy to reuse for training, evaluation, and quick iteration.
+          </p>
+
+          <ul class="bullet-list exp-bullets">
+            <li>Prepared NWP, station, wave, and precipitation datasets for training and testing workflows</li>
+            <li>Saved processed outputs in consistent Parquet layouts to reduce downstream friction</li>
+            <li>Added checks for missing values, units, ranges, and shapes so runs fail fast when inputs break</li>
+            <li>Compared SVM, Random Forest, and a CNN LSTM prototype using MAE, MSE, and CRPS</li>
+          </ul>
+
+          <div class="tech-line">
+            <span class="tech-k">Tech:</span>
+            <span class="tech-v">Python, pandas, NumPy, scikit-learn, Parquet, Docker, Airflow (basic)</span>
+          </div>
+
+          <div class="exp-mini exp-mini-nexus" aria-hidden="true"></div>
+        </article>
+
+        <!-- Role 2 -->
+        <article class="card card-glass exp-card reveal">
+          <div class="exp-header">
+            <div class="exp-logo exp-logo-iso" aria-hidden="true">
+              <svg viewBox="0 0 48 48" class="exp-logo-ico" aria-hidden="true">
+                <defs>
+                  <linearGradient id="rx" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="rgba(255,79,216,1)"></stop>
+                    <stop offset="1" stop-color="rgba(200,75,255,1)"></stop>
+                  </linearGradient>
+                </defs>
+                <path d="M14 10h20v6H14z" fill="url(#rx)" opacity="0.95"></path>
+                <path d="M18 16v18c0 4 3 7 6 7s6-3 6-7V16" fill="none" stroke="rgba(245,240,255,.85)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"></path>
+                <path d="M20 30c2 2 6 2 8 0" fill="none" stroke="rgba(245,240,255,.85)" stroke-width="2" stroke-linecap="round" opacity="0.55"></path>
+              </svg>
+            </div>
+
+            <div class="exp-titleblock">
+              <h3 class="exp-title">Graduate Research Assistant</h3>
+              <div class="exp-org">Isoverse (isoreader2) · CU Boulder</div>
+              <div class="exp-meta">Dec 2025 to Present · Boulder, USA</div>
+            </div>
+          </div>
+
+          <div class="exp-badges" aria-label="Highlights">
+            <span class="exp-badge">Reverse engineering</span>
+            <span class="exp-badge">File parsing</span>
+            <span class="exp-badge">Schema driven readers</span>
+            <span class="exp-badge">Reliability checks</span>
+          </div>
+
+          <p class="exp-lead">
+            Turned legacy instrument file formats into readable outputs with cautious parsing and clear errors.
+          </p>
+
+          <ul class="bullet-list exp-bullets">
+            <li>Traced MFC CArchive Serialize order from decompiled DLLs to infer file layouts</li>
+            <li>Mapped fields to offsets and likely meaning to guide safer parsing decisions</li>
+            <li>Built R readers that follow original write order using CSV driven schemas and inheritance notes</li>
+            <li>Added sanity checks and regression style tests to reduce silent parsing failures</li>
+          </ul>
+
+          <div class="tech-line">
+            <span class="tech-k">Tech:</span>
+            <span class="tech-v">R, CSV schemas, testing, Git</span>
+          </div>
+
+          <div class="exp-mini exp-mini-iso" aria-hidden="true"></div>
+        </article>
+      </div>
+
+      <!-- Right side illustration -->
+      <aside class="card card-glass exp-visual reveal" aria-label="Experience visual">
+        <div class="exp-visual-top">
+          <div class="kicker">OVERVIEW</div>
+          <h3 class="exp-visual-title">Signal to decision</h3>
+          <p class="muted exp-visual-sub">
+            A simple view of how your work flows: clean inputs, validation, evaluation, then skimmable results.
+          </p>
+        </div>
+
+        <div class="exp-illus-wrap" aria-hidden="true">
+          <svg class="exp-illus" viewBox="0 0 680 380" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="gLine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="rgba(200,75,255,.95)"></stop>
+                <stop offset="1" stop-color="rgba(255,79,216,.95)"></stop>
+              </linearGradient>
+              <radialGradient id="gGlow" cx="50%" cy="50%" r="60%">
+                <stop offset="0" stop-color="rgba(255,255,255,.18)"></stop>
+                <stop offset="1" stop-color="rgba(255,255,255,0)"></stop>
+              </radialGradient>
+              <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="14"></feGaussianBlur>
+              </filter>
+            </defs>
+
+            <rect x="0" y="0" width="680" height="380" rx="26" fill="rgba(255,255,255,.03)"></rect>
+
+            <circle cx="140" cy="110" r="120" fill="url(#gGlow)" filter="url(#blur)" opacity="0.9"></circle>
+            <circle cx="520" cy="240" r="140" fill="url(#gGlow)" filter="url(#blur)" opacity="0.75"></circle>
+
+            <!-- grid -->
+            <g opacity="0.20">
+              <path d="M60 70H620" stroke="rgba(245,240,255,.35)"></path>
+              <path d="M60 130H620" stroke="rgba(245,240,255,.25)"></path>
+              <path d="M60 190H620" stroke="rgba(245,240,255,.22)"></path>
+              <path d="M60 250H620" stroke="rgba(245,240,255,.20)"></path>
+              <path d="M60 310H620" stroke="rgba(245,240,255,.18)"></path>
+              <path d="M120 50V330" stroke="rgba(245,240,255,.14)"></path>
+              <path d="M220 50V330" stroke="rgba(245,240,255,.12)"></path>
+              <path d="M320 50V330" stroke="rgba(245,240,255,.10)"></path>
+              <path d="M420 50V330" stroke="rgba(245,240,255,.10)"></path>
+              <path d="M520 50V330" stroke="rgba(245,240,255,.12)"></path>
+              <path d="M620 50V330" stroke="rgba(245,240,255,.14)"></path>
+            </g>
+
+            <!-- main line -->
+            <path class="exp-line exp-line-1" d="M70 260 C140 210, 220 290, 300 220 C380 150, 460 170, 520 140 C570 115, 600 120, 630 95"
+                  fill="none" stroke="url(#gLine)" stroke-width="5" stroke-linecap="round"></path>
+
+            <!-- secondary line -->
+            <path class="exp-line exp-line-2" d="M70 290 C150 300, 230 240, 300 260 C370 280, 450 240, 520 250 C585 260, 610 235, 630 220"
+                  fill="none" stroke="rgba(245,240,255,.42)" stroke-width="3" stroke-linecap="round"></path>
+
+            <!-- points -->
+            <g>
+              <circle class="exp-dot" cx="300" cy="220" r="7" fill="rgba(255,79,216,.95)"></circle>
+              <circle class="exp-dot" cx="520" cy="140" r="7" fill="rgba(200,75,255,.95)"></circle>
+              <circle class="exp-dot" cx="630" cy="95" r="7" fill="rgba(255,255,255,.78)"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div class="exp-visual-bottom">
+          <div class="exp-step">
+            <b>Inputs</b>
+            <span class="muted">cleaned datasets</span>
+          </div>
+          <div class="exp-step">
+            <b>Checks</b>
+            <span class="muted">units, ranges, shapes</span>
+          </div>
+          <div class="exp-step">
+            <b>Evaluation</b>
+            <span class="muted">MAE, MSE, CRPS</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>

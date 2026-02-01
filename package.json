@@ -1,0 +1,9 @@
+{
+  "name": "simran-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch"
+  }
+}
